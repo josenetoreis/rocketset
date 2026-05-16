@@ -1,0 +1,19 @@
+:root {
+  --primary-red: #E3646E;
+  --secondary-purple: #BB72E9;
+  --tertiary-blue: #3996DB;
+  --quaternary-green: #82BC4F;
+  --quinary-yellow: #EABD5F;
+
+  --background-gray-100: #E2E4E9;
+  --background-gray-200: #E2E4E9;
+  --background-gray-300: #878EA1;
+  --background-gray-400: #292C34;
+  --background-gray-500: #16181D;
+  --background-gray-600: #0D0E11;
+
+  --font-family-asap: 'Asap', sans-serif;
+  --font-family-inconsolata: 'Inconsolata', monospace;
+  --font-family-maven-pro: 'Maven Pro', sans-serif;
+  --font-family-poppins: 'Poppins', sans-serif;
+}

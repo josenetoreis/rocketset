@@ -1,0 +1,73 @@
+.services {
+    padding: 80px 20px;
+    background-color: var(--background-gray-600);
+    text-align: center;
+}
+
+.services-header h2 {
+    font-family: var(--font-family-poppins);
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: var(--background-gray-500);
+    padding: 32px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: left;
+    border: 1px solid var(--background-gray-400);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-red);
+}
+
+.card-purple:hover { 
+    border-color: var(--secondary-purple); 
+    box-shadow: 0 0 15px rgba(230, 54, 78, 0.2);
+}
+
+.card-green:hover { 
+    border-color: var(--quaternary-green); 
+    box-shadow: 0 0 15px rgba(57, 150, 219, 0.2);
+}
+.card-yellow:hover { 
+    border-color: var(--quinary-yellow); 
+    box-shadow: 0 0 15px rgba(234, 189, 95, 0.2);
+}
+
+.service-icon img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+.service-text h3 {
+    font-family: var(--font-family-asap);
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.service-text p {
+    font-family: var(--font-family-maven-pro);
+    color: var(--background-gray-300);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.subtitle{
+  color: var(--primary-red);
+  font-family: var(--font-family-maven-pro);
+}

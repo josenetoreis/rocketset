@@ -1,0 +1,123 @@
+/* Estilização da seção de Contato */
+.footer {
+    padding: 100px 20px;
+    background-image: url(/assets/Background_Contacts.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--background-gray-500);
+    background-attachment: scroll;
+    background-color: var(--background-gray-600);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-header {
+    margin-bottom: 48px;
+}
+
+
+.subtitle-purple {
+    font-family: var(--font-family-asap);
+    color: var(--secondary-purple);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.footer-header h2 {
+    font-family: var(--font-family-poppins);
+    color: var(--background-gray-100);
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.footer-desc {
+    font-family: var(--font-family-maven-pro);
+    color: var(--background-gray-300);
+    font-size: 1rem;
+}
+
+
+.contact-links {
+    width: 100%;
+    max-width: 500px; 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.contact-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-gray-500);
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.contact-info img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+}
+
+.contact-info span {
+    font-family: var(--font-family-asap);
+    color: var(--background-gray-200);
+    font-size: 1rem;
+}
+
+
+.external-link {
+    width: 16px;
+    height: 16px;
+    filter: invert(1); 
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+
+.contact-button:hover {
+    background-color: var(--background-gray-400);
+    transform: translateX(5px); 
+    border-color: var(--background-gray-300);
+}
+
+.contact-button:hover .external-link {
+    opacity: 1;
+}
+
+.contact-button:hover span {
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 768px) {
+    .footer-header h2 {
+        font-size: 1.5rem;
+    }
+    .contact-links {
+        max-width: 100%;
+    }
+      .footer {
+        background-size: contain;
+        background-position: top center;
+    }
+} 
+
