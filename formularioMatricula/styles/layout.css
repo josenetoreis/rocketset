@@ -1,0 +1,76 @@
+#app {
+  display: grid;
+  grid-template-columns: 51.25% 48.75% ;
+
+  /* permitir que o conteúdo ultrapasse a altura da viewport e gere rolagem
+     quando necessário (ex.: em telas pequenas) */
+  min-height: 100vh;
+  overflow: visible;
+}
+
+main {
+  overflow: auto;
+  padding: 4rem;
+
+  & .main-container {
+    max-width: 33rem;
+    margin: 0 auto;
+  }
+
+  & .back{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & h1 {
+    font: 600 1.5rem/1.25 var(--font-family);
+    margin-bottom: .5rem;
+    font-weight: bold;
+  }
+
+}
+
+aside {
+  background-color: var(--surface-secondary);
+  padding: 4rem;
+
+  & .aside-container {
+    max-width: 31rem;
+
+    & > img {
+      margin-top: 2rem;
+    }
+  }
+
+  & h2 {
+    font: 600 1.25rem/1.25 var(--font-family);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    & span {
+      color: var(--text-highlight);
+    }
+  }
+}
+
+/* Responsividade: empilha colunas em telas pequenas */
+@media (max-width: 768px) {
+  #app {
+    grid-template-columns: 1fr;
+  }
+
+  main,
+  aside {
+    padding: 2rem;
+  }
+
+  aside .aside-container {
+    max-width: 100%;
+  }
+
+  /* esconder ilustração em dispositivos muito pequenos para economizar espaço */
+  .illustration {
+    display: none;
+  }
+}
