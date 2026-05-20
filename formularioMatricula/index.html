@@ -28,15 +28,15 @@
           <legend>Informações da Criança</legend>
           <div class="input-wrapper">
             <label for="fullname">Nome Completo</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Nome completo da criança" required>
+            <input type="text" id="fullname" name="fullname" placeholder="Nome completo da criança" >
           </div>
           <div class="input-wrapper">
             <label for="birth">Data de Nascimento</label>
-            <input type="date" id="birthdate" name="birth" lang="pt-BR" required>
+            <input type="date" id="birthdate" name="birth" lang="pt-BR" >
           </div>
           <div class="select-wrapper">
             <label for="gender">Sexo</label>
-            <select name="gender" id="gender" required>
+            <select name="gender" id="gender" >
               <option value="">Selecione</option>
               <option value="male">Masculino</option>
               <option value="female">Feminino</option>
@@ -65,30 +65,53 @@
           <legend>Endereço residencial</legend>
           <div class="input-wrapper">
             <label for="cep">CEP</label>
-            <input type="text" id="cep" name="cep" placeholder="CEP do endereço" required> 
+            <input type="text" id="cep" name="cep" placeholder="CEP do endereço" > 
           </div>
 
           <div class="flex">
             <div class="input-wrapper flex-2" >
               <label for="street">Rua</label>
-              <input type="text" id="street" name="street" value="Rua das Flores" disabled required>
+              <input type="text" id="street" name="street" value="Rua das Flores" disabled >
             </div>
 
             <div class="input-wrapper flex-1">
               <label for="number">Número</label>
-              <input type="text" id="number" name="number" required>
+              <input type="text" id="number" name="number" >
             </div>
           </div>
 
           <div class="flex">
             <div class="input-wrapper flex-2" >
               <label for="city">Cidade</label>
-              <input type="text" id="city" name="city" value="São Paulo" disabled required>
+              <input type="text" id="city" name="city" value="São Paulo" disabled >
             </div>
 
             <div class="input-wrapper flex-1">
               <label for="state">Estado</label>
-              <input type="text" id="state" name="state" value="SP" disabled required>
+              <input type="text" id="state" name="state" value="SP" disabled >
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="guardian">
+          <legend>Dados do Responsável</legend>
+          <div class="input-wrapper">
+            <label for="guardian-name">Nome do responsável</label>
+            <input type="text" id="guardian" name="guardian"  placeholder="Nome completo do responsável" >
+            <small>Principal responsável legal e contato de emergência</small>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone"  placeholder="(10) 9 8765-4321" >
+          </div>
+
+          <div class="input-wrapper">
+            <label for="guardian-email">Email</label>
+            <input type="email" id="guardian-email" name="guardian-email"  placeholder="email@dominio.com" required>
+            <div class="error">
+              <img src="assets/icons/alert-circle.svg" alt="Ícone de alerta vermelho">
+              <span>insira um email válido</span>
             </div>
           </div>
         </fieldset>
