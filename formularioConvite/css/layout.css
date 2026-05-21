@@ -1,0 +1,134 @@
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.card-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  max-width: 1120px;
+  width: 100%;
+  background: linear-gradient(135deg, #202024 0%, #15151a 40%, #101018 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(90, 90, 96, 0.4);
+}
+
+/* Lado da foto */
+.card-media {
+  position: relative;
+  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+  background-image: radial-gradient(circle at top left, rgba(0, 0, 0, 0.14), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.12), transparent 22%),
+    linear-gradient(135deg, #11101c 0%, #000000 100%);
+  overflow: hidden;
+}
+
+.card-media img {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: 80%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  filter: brightness(1) saturate(1.15) contrast(1.08);
+}
+
+.card-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.12));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-media-content {
+  position: absolute;
+  inset: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--text-title);
+  z-index: 2;
+  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+.brand-mark,
+.media-title,
+.media-subtitle {
+  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.brand-mark {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-light);
+}
+
+.media-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  max-width: 14ch;
+  position: relative;
+  top: -150%;
+}
+
+.media-subtitle {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  position: relative;
+  top: 130%;
+}
+
+/* Lado do formulário */
+.card-form {
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.card-form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-form-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-title);
+}
+
+.card-form-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  opacity: 0.9;
+}
+
+@media (max-width: 880px) {
+  .card-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .card-media {
+    height: 260px;
+  }
+
+  .card-media-content {
+    inset: 1.5rem;
+  }
+
+  .card-form {
+    padding: 1.75rem 1.5rem 2rem;
+  }
+}

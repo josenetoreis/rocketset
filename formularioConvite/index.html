@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Festinvite - Crie seu convite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="card-shell">
+      <!-- LADO ESQUERDO: FOTO / HERO -->
+      <aside class="card-media" aria-hidden="true">
+        <img src="assests/logo.png" alt="Bolo colorido com velas">
+        <div class="card-media-overlay"></div>
+        <div class="card-media-content">
+          <header>
+            <div class="brand-mark">Festinvite</div>
+          </header>
+
+          <div>
+            <h1 class="media-title">Crie convites incríveis em poucos minutos.</h1>
+            <p class="media-subtitle">
+              Personalize cores, texto e detalhes do seu evento em um layout moderno e pronto para compartilhar.
+            </p>
+          </div>
+
+          <small style="font-size: 0.8rem; opacity: 0.85;">
+            Convites perfeitos para aniversários, casamentos, confraternizações e muito mais.
+          </small>
+        </div>
+      </aside>
+
+      <!-- LADO DIREITO: FORMULÁRIO COMPLETO -->
+      <main class="card-form">
+        <header class="card-form-header">
+          <h2 class="card-form-title">Crie seu convite</h2>
+          <p class="card-form-subtitle">
+            Preencha as informações do evento e veja seu convite ganhar vida com o seu estilo.
+          </p>
+        </header>
+
+        <form novalidate>
+          <!-- Sobre o evento -->
+          <section class="form-section" aria-labelledby="sec-evento">
+            <h3 id="sec-evento" class="form-section-title">Sobre o evento</h3>
+
+            <div class="form-grid">
+              <div class="form-group form-grid-full">
+                <label class="form-label" for="title">
+                  Título do evento <span>*</span>
+                </label>
+                <input
+                  id="title"
+                  class="input-control"
+                  type="text"
+                  placeholder="Ex.: Festa de aniversário da Ana"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="start">
+                  Início <span>*</span>
+                </label>
+                <input
+                  id="start"
+                  class="input-control"
+                  type="datetime-local"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="end">
+                  Fim
+                </label>
+                <input
+                  id="end"
+                  class="input-control"
+                  type="datetime-local"
+                >
+              </div>
+
+              <div class="form-group form-grid-full">
+                <label class="form-label">
+                  Tipo de evento
+                </label>
+                <div class="chip-group" role="radiogroup" aria-label="Tipo de evento">
+                  <button type="button" class="chip chip--active">Presencial</button>
+                  <button type="button" class="chip">Online</button>
+                  <button type="button" class="chip">Híbrido</button>
+                </div>
+              </div>
+
+              <div class="form-group form-grid-full">
+                <label class="form-label" for="location">
+                  Local / link
+                </label>
+                <input
+                  id="location"
+                  class="input-control"
+                  type="text"
+                  placeholder="Endereço completo ou link da reunião"
+                >
+              </div>
+
+              <div class="form-group form-grid-full">
+                <label class="form-label" for="description">
+                  Descrição
+                </label>
+                <textarea
+                  id="description"
+                  class="textarea-control"
+                  placeholder="Conte um pouco sobre o evento, dress code, presentes, etc."
+                ></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- Personalização -->
+          <section class="form-section" aria-labelledby="sec-personalizacao">
+            <h3 id="sec-personalizacao" class="form-section-title">Personalização</h3>
+
+            <div class="form-grid">
+              <div class="form-group form-grid-full">
+                <div class="color-row">
+                  <div>
+                    <p class="form-label">Cor principal do convite</p>
+                    <small style="font-size: 0.8rem; color: var(--input-placeholder);">
+                      Escolha uma cor que combine com o tema do evento.
+                    </small>
+                  </div>
+                  <div class="color-dots">
+                    <button type="button" class="color-dot color-dot--active" style="background: var(--accent-blue);"></button>
+                    <button type="button" class="color-dot" style="background: var(--accent-purple);"></button>
+                    <button type="button" class="color-dot" style="background: var(--accent-pink);"></button>
+                    <button type="button" class="color-dot" style="background: var(--accent-orange);"></button>
+                    <button type="button" class="color-dot" style="background: var(--accent-green);"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contato -->
+          <section class="form-section" aria-labelledby="sec-contato">
+            <h3 id="sec-contato" class="form-section-title">Dados para contato</h3>
+
+            <div class="form-grid">
+              <div class="form-group form-grid-full">
+                <label class="form-label" for="name">
+                  Nome completo <span>*</span>
+                </label>
+                <input
+                  id="name"
+                  class="input-control"
+                  type="text"
+                  placeholder="Seu nome"
+                  required
+                >
+                <p class="error-message" aria-live="polite" style="display:none;">
+                  Campo obrigatório
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">
+                  E-mail
+                </label>
+                <input
+                  id="email"
+                  class="input-control"
+                  type="email"
+                  placeholder="voce@exemplo.com"
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">
+                  Telefone
+                </label>
+                <input
+                  id="phone"
+                  class="input-control"
+                  type="tel"
+                  placeholder="(00) 00000-0000"
+                >
+              </div>
+            </div>
+          </section>
+
+          <div class="form-footer">
+            <button type="submit" class="button-primary">
+              <span>Gerar convite</span>
+              <span>🎉</span>
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
